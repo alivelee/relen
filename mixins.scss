@@ -1,0 +1,27 @@
+//border-radius
+@mixin s-border-radius($radius: 5px) {
+	border-radius: $radius;
+	-moz-border-radius: $radius;
+	-webkit-border-radius: $radius;
+}
+
+//Custom border-radius
+@mixin c-border-radius($topleft: 5px,$topright: 5px,$bottomleft: 5px,$bottomright: 5px){
+	border-radius: $topleft $topright $bottomleft $bottomright;
+	-moz-border-radius: $topleft $topright $bottomleft $bottomright;
+	-webkit-border-radius: $topleft $topright $bottomleft $bottomright;
+}
+
+//Custom box-shadow
+@mixin c-box-shadow($x: 1px,$y: 1px,$blur: 5px,$spread: 0,$alpha: 0.1){
+    box-shadow: $x, $y, $blur, rgba(0, 0, 0, $alpha);
+    -webkit-box-shadow: $x, $y, $blur, rgba(0, 0, 0, $alpha);
+    -moz-box-shadow: $x, $y, $blur, rgba(0, 0, 0, $alpha);
+}
+
+//transition
+@mixin c-transition($name,$duration: .5s,$timing-function: linear,$delay: .1s){
+	-webkit-transition: $name $duration $timing-function $delay;
+	   -moz-transition: $name $duration $timing-function $delay;
+	        transition: $name $duration $timing-function $delay;
+}
